@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм»
 
 * Студент: [Veronika  Ertel](https://up.htmlacademy.ru/javascript/28/user/2214419).
-* Наставник: `Неизвестно`.
+* Наставник: [Никита Канаев] (https://htmlacademy.ru/profile/lui).
 
 ---
 
