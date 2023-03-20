@@ -4,13 +4,34 @@ let stringSentence = 'проверяемая строка';
 
 
 // Cтрока короче 20 символов
-console.log(stringSentence.length, 20); // true
+let maxLength = 20;
+
+function checkStringMaxLength(stringSentence, maxLength){
+  return stringSentence.length <= maxLength;
+}
+  let isStringLongEnough = checkStringMaxLength(stringSentence, maxLength);
+
+ console.log(isStringLongEnough);
+
 
 // Длина строки ровно 18 символов
-console.log(stringSentence.length, 18); // true
+let equalsLength = 18;
 
-// Строка длиннее 10 символов
-console.log(stringSentence.length, 10); // true
+let checkStringEquals = (stringSentence, equalsLength) => stringSentence.length == equalsLength;
+
+  let isStringEquals = checkStringEquals(stringSentence, equalsLength);
+
+ console.log(isStringEquals);
+
+
+ // Строка длиннее 10 символов
+
+let longerString = 10;
+  let checkStringLength = (stringSentence, longerString) => stringSentence.length < longerString;
+
+  let isStringLonger = checkStringLength(stringSentence, longerString);
+
+console.log(isStringLonger);
 
 
 
@@ -69,3 +90,24 @@ console.log(parseInt('2023 год'));
 
 // 3.5 имяФункции('а я томат');           // NaN
 console.log(Number('а я томат'));
+
+
+/* 4. Функция, которая принимает три параметра: исходную строку, минимальную длину и строку
+с добавочными символами — и возвращает исходную строку, дополненную указанными символами
+до заданной длины. Символы добавляются в начало строки. Если исходная строка превышает
+заданную длину, она не должна обрезаться. Если «добивка» слишком длинная, она обрезается с конца. */
+
+// Добавочный символ использован один раз
+имяФункции('1', 2, '0');      // '01'
+
+// Добавочный символ использован три раза
+имяФункции('1', 4, '0');      // '0001'
+
+// Добавочные символы обрезаны с конца
+имяФункции('q', 4, 'werty');  // 'werq'
+
+// Добавочные символы использованы полтора раза
+имяФункции('q', 4, 'we');     // 'wweq'
+
+// Добавочные символы не использованы, исходная строка не изменена
+имяФункции('qwerty', 4, '0'); // 'qwerty'
