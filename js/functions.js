@@ -3,7 +3,7 @@
 let stringSentence = 'проверяемая строка';
 
 
-// Cтрока короче 20 символов
+// Cтрока короче 20 символов true
 let maxLength = 20;
 
 function checkStringMaxLength(stringSentence, maxLength){
@@ -14,7 +14,7 @@ function checkStringMaxLength(stringSentence, maxLength){
  console.log(isStringLongEnough);
 
 
-// Длина строки ровно 18 символов
+// Длина строки ровно 18 символов true
 let equalsLength = 18;
 
 let checkStringEquals = (stringSentence, equalsLength) => stringSentence.length == equalsLength;
@@ -24,7 +24,7 @@ let checkStringEquals = (stringSentence, equalsLength) => stringSentence.length 
  console.log(isStringEquals);
 
 
- // Строка длиннее 10 символов
+ // Строка длиннее 10 символов false
 
 let longerString = 10;
   let checkStringLength = (stringSentence, longerString) => stringSentence.length < longerString;
@@ -80,17 +80,29 @@ console.log(isPalindrome(string));
 Если в строке нет ни одной цифры, функция должна вернуть NaN:*/
 
 // 3.1 имяФункции('2023 год');            // 2023
-console.log(parseInt('2023 год'));
+let extractIntegers = parseInt('2023 год');
+console.log(extractIntegers);
 
 // 3.2 имяФункции('ECMAScript 2022');     // 2022
-
 // 3.3 имяФункции('1 кефир, 0.5 батона'); // 105
-
 // 3.4 имяФункции('агент 007');           // 7
 
-// 3.5 имяФункции('а я томат');           // NaN
-console.log(Number('а я томат'));
+function extractDigits(str) {
+  const digits = str.match(/\d/g);
+  if (digits === null) {
+    return NaN;
+  }
+  return parseInt(digits.join(''), 10);
+}
+console.log(extractDigits('ECMAScript 2022'));
+console.log(extractDigits('1 кефир, 0.5 батона'));
+console.log(extractDigits('агент 007'));
 
+// 3.5 имяФункции('а я томат');           // NaN
+let extractNumbers = Number('а я томат');
+console.log(extractNumbers);
+
+console.log(extractDigits('а я томат'));
 
 /* 4. Функция, которая принимает три параметра: исходную строку, минимальную длину и строку
 с добавочными символами — и возвращает исходную строку, дополненную указанными символами
