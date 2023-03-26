@@ -16,16 +16,16 @@ checkStringLength('проверяемая строка', 18);
 checkStringLength('проверяемая строка', 10);
 
 
-
 // 2. Палиндром
 
 function isPalindrome(string){
   for (let i = 0, j = string.length - 1; i < j; i++, j--){
-    if(string[i] != string[j])
+    if(string[i] !== string[j]){
       return false;
+    }
   }
   return true;
-}
+};
 
 // Строка является палиндромом. имяФункции('топот'); // true
 isPalindrome('топот');
@@ -85,4 +85,4 @@ extractDigits('а я томат');
 //имяФункции('q', 4, 'we');     // 'wweq'
 
 // Добавочные символы не использованы, исходная строка не изменена
-//имяФункции('qwerty', 4, '0'); // 'qwerty'
+/*имяФункции('qwerty', 4, '0'); // 'qwerty'*/
