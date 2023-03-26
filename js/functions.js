@@ -37,7 +37,7 @@ console.log(isStringLonger);
 
 // 2. Палиндром
 
-// Строка является палиндромом. имяФункции('топот'); // true
+
 
 function isPalindrome(string){
   for (let i = 0, j = string.length - 1; i < j; i++, j--){
@@ -46,34 +46,21 @@ function isPalindrome(string){
   }
   return true;
 }
-let string = 'топот';
 
-console.log(isPalindrome(string));
+// Строка является палиндромом. имяФункции('топот'); // true
+
+isPalindrome('топот');
+console.log(isPalindrome('топот'));
 
 // Несмотря на разный регистр, тоже палиндром. имяФункции('ДовОд'); // true
 
-function isPalindrome(string){
-  for (let i = 0, j = string.length - 1; i < j; i++, j--){
-    if(string[i] != string[j])
-    return false;
-  }
-  return true;
-}
-let string = 'ДовОд';
-console.log(isPalindrome(string.toLowerCase));
+isPalindrome('ДовОд');
+console.log(isPalindrome('ДовОд'.toLowerCase));
 
 // Это не палиндром. имяФункции('Кекс');  // false
 
-function isPalindrome(string){
-  for (let i = 0, j = string.length - 1; i < j; i++, j--){
-    if(string[i] != string[j])
-    return false;
-  }
-  return true;
-}
-let string = 'Кекс';
-string.toLowerCase();
-console.log(isPalindrome(string));
+isPalindrome('Кекс');
+console.log(isPalindrome('Кекс'));
 
 /* 3. Функция, которая принимает строку, извлекает содержащиеся в ней цифры от 0 до 9 и возвращает их
 в виде целого положительного числа.
@@ -112,16 +99,16 @@ console.log(extractDigits('а я томат'));
 // не смогла даже с помощью здесь решить. до сих пор кажется всё очень сложным.
 
 // Добавочный символ использован один раз
-имяФункции('1', 2, '0');      // '01'
+//имяФункции('1', 2, '0');      // '01'
 
 // Добавочный символ использован три раза
-имяФункции('1', 4, '0');      // '0001'
+//имяФункции('1', 4, '0');      // '0001'
 
 // Добавочные символы обрезаны с конца
-имяФункции('q', 4, 'werty');  // 'werq'
+//имяФункции('q', 4, 'werty');  // 'werq'
 
 // Добавочные символы использованы полтора раза
-имяФункции('q', 4, 'we');     // 'wweq'
+//имяФункции('q', 4, 'we');     // 'wweq'
 
 // Добавочные символы не использованы, исходная строка не изменена
-имяФункции('qwerty', 4, '0'); // 'qwerty'
+//имяФункции('qwerty', 4, '0'); // 'qwerty'
