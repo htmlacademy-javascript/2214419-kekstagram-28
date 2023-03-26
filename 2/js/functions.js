@@ -6,38 +6,35 @@ function checkStringLength(stringSentence, maxLength){
 
 // Cтрока короче 20 символов true
 checkStringLength('проверяемая строка', 20);
-console.log(checkStringLength('проверяемая строка', 20));
+
 
 // Длина строки ровно 18 символов true
 checkStringLength('проверяемая строка', 18);
-console.log(checkStringLength('проверяемая строка', 18));
 
- // Строка длиннее 10 символов false
+
+// Строка длиннее 10 символов false
 checkStringLength('проверяемая строка', 10);
-console.log(checkStringLength('проверяемая строка', 10));
 
 
 // 2. Палиндром
 
 function isPalindrome(string){
   for (let i = 0, j = string.length - 1; i < j; i++, j--){
-    if(string[i] != string[j])
+    if(string[i] !== string[j]){
       return false;
+    }
   }
   return true;
-}
+};
 
 // Строка является палиндромом. имяФункции('топот'); // true
 isPalindrome('топот');
-console.log(isPalindrome('топот'));
 
 // Несмотря на разный регистр, тоже палиндром. имяФункции('ДовОд'); // true
 isPalindrome('ДовОд');
-console.log(isPalindrome('ДовОд'.toLowerCase));
 
 // Это не палиндром. имяФункции('Кекс');  // false
 isPalindrome('Кекс');
-console.log(isPalindrome('Кекс'));
 
 
 /* 3. Функция, которая принимает строку, извлекает содержащиеся в ней цифры от 0 до 9 и возвращает их
@@ -54,23 +51,18 @@ function extractDigits(str) {
 
 // 3.1 имяФункции('2023 год');            // 2023
 extractDigits('2023 год');
-console.log(extractDigits('2023 год'));
 
 // 3.2 имяФункции('ECMAScript 2022');     // 2022
 extractDigits('ECMAScript 2022');
-console.log(extractDigits('ECMAScript 2022'));
 
 // 3.3 имяФункции('1 кефир, 0.5 батона'); // 105
 extractDigits('1 кефир, 0.5 батона');
-console.log(extractDigits('1 кефир, 0.5 батона'));
 
 // 3.4 имяФункции('агент 007');           // 7
 extractDigits('агент 007');
-console.log(extractDigits('агент 007'));
 
 // 3.5 имяФункции('а я томат');           // NaN
 extractDigits('а я томат');
-console.log(extractDigits('а я томат'));
 
 
 /* 4. Функция, которая принимает три параметра: исходную строку, минимальную длину и строку
@@ -93,4 +85,4 @@ console.log(extractDigits('а я томат'));
 //имяФункции('q', 4, 'we');     // 'wweq'
 
 // Добавочные символы не использованы, исходная строка не изменена
-//имяФункции('qwerty', 4, '0'); // 'qwerty'
+/*имяФункции('qwerty', 4, '0'); // 'qwerty'*/
